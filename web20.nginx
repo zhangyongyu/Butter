@@ -1,0 +1,11 @@
+server {
+    listen 80;
+
+    location /gua {
+        proxy_pass http://localhost:3000;
+    }
+
+    location / {
+        proxy_pass http://localhost:2000;
+    }
+}
