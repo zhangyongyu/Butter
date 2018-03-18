@@ -42,3 +42,192 @@
     </form>
 </body>
 </html>
+<!--{% extends "base.html" %}-->
+<!--{% block title %}-->
+<!--主页-->
+<!--{% endblock %}-->
+<!--{% block main %}-->
+
+<!--<div id="page-outer">-->
+    <!--<div id="page-container" class="AppContent wrapper wrapper-home">-->
+
+        <!--<div class="dashboard dashboard-left">-->
+            <!--<div class="DashboardProfileCard  module">-->
+
+                <!--<a class="DashboardProfileCard-bg u-bgUserColor u-block"-->
+                   <!--href="/zyy93"-->
+                   <!--tabindex="-1"-->
+                   <!--aria-hidden="true"-->
+                   <!--rel="noopener">-->
+                <!--</a>-->
+                <!--<div class="DashboardProfileCard-content" style="padding-bottom: 30px">-->
+
+                    <!--<a class="DashboardProfileCard-avatarLink u-inlineBlock" href="/zyy93" title="啊钰" tabindex="-1"-->
+                       <!--aria-hidden="true" rel="noopener">-->
+                        <!--<img class="DashboardProfileCard-avatarImage js-action-profile-avatar"-->
+                             <!--src="https://pbs.twimg.com/profile_images/923237531977519104/mq-doDiM_bigger.jpg"-->
+                             <!--alt="">-->
+                    <!--</a>-->
+
+                    <!--<div class="DashboardProfileCard-userFields account-group">-->
+                        <!--<div class="DashboardProfileCard-name u-textTruncate">-->
+                            <!--<a class="u-textInheritColor js-nav" href="/zyy93" rel="noopener">啊钰</a><span-->
+                                <!--class="UserBadges"></span>-->
+                        <!--</div>-->
+                        <!--<div class="DashboardProfileCard-screenname u-inlineBlock u-dir " dir="ltr">-->
+                            <!--<a class="DashboardProfileCard-screennameLink u-linkComplex u-linkClean js-nav"-->
+                               <!--href="/zyy93" rel="noopener"><span class="username u-dir" dir="ltr">@<b-->
+                                    <!--class="u-linkComplex-target">zyy93</b></span></a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</div>-->
+
+
+        <!--</div>-->
+
+
+        <!--<div role="main" aria-labelledby="content-main-heading" class="content-main top-timeline-tweetbox"-->
+             <!--id="timeline" tabindex="-1">-->
+
+            <!--<div id="above-timeline-prompt"></div>-->
+
+
+            <!--<div class="content-header visuallyhidden">-->
+                <!--<div class="header-inner">-->
+                    <!--<h2 id="content-main-heading" class="js-timeline-title">发布新话题</h2>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="stream-container conversations-enabled "-->
+                 <!--data-max-position="974985783122776064" data-min-position="974942751534927873"-->
+            <!--&gt;-->
+
+                <!--<div class="stream ">-->
+                    <!--<div style="background-color:white; padding:10px; margin:0 1px ;border-bottom:1px solid #E6ECF0 ">-->
+                        <!--<a href="/topic"-->
+                           <!--class="topic-tab current-tab">-->
+                            <!--全部-->
+                        <!--</a>-->
+                        <!--{% for b in bs %}-->
+                        <!--<a href="/topic?board_id={{ b.id }}"-->
+                           <!--class="topic-tab current-tab">-->
+                            <!--{{ b.title }}-->
+                        <!--</a>-->
+                        <!--{% endfor %}-->
+
+                    <!--</div>-->
+                    <!--<ol class="stream-items js-navigable-stream " id="stream-items-id">-->
+
+                        <!--{% for t in ms %}-->
+                        <!--<li class="js-stream-item stream-item stream-item">-->
+
+                            <!--<div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable dismissible-content-->
+       <!--original-tweet js-original-tweet" style="padding-top:30px">-->
+
+                                <!--<a class="user_avatar pull-left">-->
+                                    <!--<img src="{{ t.user().user_image }}" title="avatar" style="display: inline-block;vertical-align: middle;float: none;"/>-->
+                                <!--</a>-->
+
+                                <!--<a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}">-->
+                                    <!--{{ t.title }}-->
+                                <!--</a>-->
+                                <!--&lt;!&ndash;<a class="topic_title"&ndash;&gt;-->
+                                   <!--&lt;!&ndash;href="{{ url_for('topic.delete', id=t.id, token=token) }}">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;删除&ndash;&gt;-->
+                                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+
+                                <!--<span class="pull-right">-->
+
+                                    <!--<button class="ProfileTweet-actionButton js-actionButton js-actionReply"-->
+                                            <!--data-modal="ProfileTweet-reply" type="button"-->
+                                            <!--aria-describedby="profile-tweet-action-reply-count-aria-975283593747582976">-->
+                                    <!--<div class="IconContainer js-tooltip" data-original-title="回复">-->
+                                      <!--<span class="Icon Icon&#45;&#45;medium Icon&#45;&#45;reply"></span>-->
+                                      <!--<span class="u-hiddenVisually">回复</span>-->
+                                    <!--</div>-->
+                                      <!--<span class="ProfileTweet-actionCount ">-->
+                                        <!--<span class="ProfileTweet-actionCountForPresentation">{{ t.replies() | count }} </span>-->
+                                      <!--</span>-->
+                                    <!--</button>-->
+
+                                     <!--<button class="ProfileTweet-actionButton js-actionButton js-actionReply"-->
+                                             <!--data-modal="ProfileTweet-reply" type="button"-->
+                                             <!--aria-describedby="profile-tweet-action-reply-count-aria-975283593747582976">-->
+                                        <!--<div class="IconContainer js-tooltip" data-original-title="回复">-->
+                                          <!--<span class="Icon Icon&#45;&#45;medium Icon&#45;&#45;promotedTrend"></span>-->
+                                          <!--<span class="u-hiddenVisually">浏览数</span>-->
+                                        <!--</div>-->
+                                          <!--<span class="ProfileTweet-actionCount ">-->
+                                            <!--<span class="ProfileTweet-actionCountForPresentation">{{ t.views }}</span>-->
+                                          <!--</span>-->
+                                    <!--</button>-->
+                                <!--</span>-->
+
+                            <!--</div>-->
+
+                        <!--</li>-->
+
+                        <!--{% endfor %}-->
+
+
+                    <!--</ol>-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+        <!--<div class="dashboard dashboard-right">-->
+
+            <!--<div class="module wtf-module js-wtf-module roaming-module has-content">-->
+
+                <!--<div class="flex-module">-->
+
+                    <!--<div class="flex-module-header">-->
+                        <!--<h3 class="inline align-bottom"><img src="/static/butter-logo.png" class="img-fluid"-->
+                                                             <!--style="max-width: 20px; height: auto; vertical-align: bottom;">-->
+                            <!--今日推荐绘本</h3>-->
+
+
+                        <!--<a href="http://item.jd.com/1193086790.html">-->
+
+                            <!--<div class="QuoteTweet u-block js-tweet-details-fixer" style="margin: 10px 0">-->
+                                <!--<div class="QuoteTweet-container">-->
+                                    <!--<div class="QuoteTweet-innerContainer u-cf js-permalink js-media-container">-->
+                                        <!--<div style="margin: 10px;text-align: center;">-->
+
+                                            <!--<img src="/static/sw.jpg" class="img-fluid"-->
+                                                 <!--style="max-width: 150px;height: auto;">-->
+                                            <!--<h4>Storm Whale</h4>-->
+                                            <!--<p>-->
+                                                <!--一个父亲常常出海的孤单小男孩，遇见了搁浅的小鲸鱼...-->
+                                            <!--</p>-->
+
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                        <!--</a>-->
+
+
+                        <!--<p class='text-muted' style="text-align: right;margin-top: 20px">@黄油绘本——儿童绘本交流论坛</p>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+
+
+                <!--<script>-->
+        <!--(function () {-->
+            <!--var editor = new Editor();-->
+            <!--editor.render($('.editor')[0]);-->
+        <!--})();-->
+
+
+
+
+
+                <!--</script>-->
+                <!--{% endblock %}-->

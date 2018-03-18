@@ -23,22 +23,6 @@ def index():
     else:
         ms = Topic.all(board_id=board_id)
 
-    # if r.exists(board_id):
-    #     log('hit redis')
-    #     json_string = r.get(board_id)
-    #     json_list = json.loads(json_string)
-    # else:
-    #     print('not hit redis')
-    #     json_list = []
-    #     for m in ms:
-    #         j = m.json()
-    #         j['replies'] = m.replies()
-    #         j['user_image'] = m.user().user_image
-    #         json_list.append(j)
-    #     json_string = json.dumps(json_list)
-    #     r.set(board_id, json_string)
-    # ms = json_list
-
     token = new_csrf_token()
     bs = Board.all()
     return render_template("topic/index.html", ms=ms, token=token, bs=bs, bid=board_id)
@@ -46,7 +30,7 @@ def index():
 
 @main.route('/<string:id>')
 def detail(id):
-    m = Topic.one(id=id)
+    m = Topic.find(id=id)
     # 传递 topic 的所有 reply 到 页面中
     return render_template("topic/detail.html", topic=m)
 
