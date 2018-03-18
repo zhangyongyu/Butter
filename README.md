@@ -1,1 +1,1 @@
-#bbs
+![](/static/img/butter.gif)
