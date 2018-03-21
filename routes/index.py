@@ -34,14 +34,7 @@ main = Blueprint('index', __name__)
 
 @main.route("/")
 def index():
-    board_id = request.args.get('board_id', 'all')
-    if board_id == 'all':
-        ms = Topic.all()
-    else:
-        ms = Topic.all(board_id=board_id)
-
-    bs = Board.all()
-    return render_template("index.html", ms=ms, bs=bs, bid=board_id)
+    return redirect(url_for('topic.index'))
 
 @main.route("/register", methods=['POST'])
 def register():
@@ -131,6 +124,7 @@ def changeprofile():
         bio=form['bio'],
     ))
     return redirect(url_for(".settings"))
+
 
 @main.route('/image/add', methods=["POST"])
 def add_img():
