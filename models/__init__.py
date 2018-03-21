@@ -7,7 +7,7 @@ from utils import log
 
 
 class Model(object):
-    db = MongoClient()['web21']
+    db = MongoClient()['butter']
 
     @classmethod
     def valid_names(cls):

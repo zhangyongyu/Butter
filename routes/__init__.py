@@ -8,10 +8,20 @@ from models.user import User
 from utils import log
 
 
+# def current_user():
+#     uid = session['user_id']
+#     u = User.one(id=uid)
+#     return u
+
+
 def current_user():
-    uid = session['user_id']
-    u = User.one(id=uid)
-    return u
+    if 'user_id' in session:
+        uid = session['user_id']
+        u = User.one(id=uid)
+        return u
+    else :
+        anonym = User.anonym()
+        return anonym
 
 
 # csrf_tokens = dict()

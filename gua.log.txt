@@ -1646,3 +1646,53 @@
 00:41:48 reply **赞**
 00:41:48 reply []
 00:41:48 after send mail
+20:39:24 new token 45a385d6-8d02-4a42-acaf-e55c39e8daa2 5aae86aab2395e95cef510bd
+20:39:27 new token 7690019f-9bea-4323-8efd-b04260bbd12c 5aae86aab2395e95cef510bd
+21:51:26 new token 03f73e91-d546-4d4e-a495-7f648bfa01ea 5aae86aab2395e95cef510bd
+21:51:28 new token dd3dc884-e6ea-409a-a94a-d8ae870f257d 5aae86aab2395e95cef510bd
+21:51:28 new token 2a860dc9-3716-4c95-aca1-61137667cdb0 5aae86aab2395e95cef510bd
+21:51:29 new token 3ac68b45-67cd-423d-976a-533ac906b84f 5aae86aab2395e95cef510bd
+21:51:30 new token e007a08a-6226-46f8-bf59-9045910cd2b6 5aae86aab2395e95cef510bd
+21:59:33 new token 1599950e-05aa-46f1-89c6-213abe70a181 5ab264eda4bc71eb5940935a
+23:12:20 anonym::: <User: 
+  deleted = False
+  created_time = 1521645140
+  updated_time = 1521645140
+  username = Anonym
+  password = Anonym
+  user_image = /uploads/default.png
+  bio = 
+  _id = 5ab27654a4bc71edeaab9d20
+  id = 5ab27654a4bc71edeaab9d20
+>
+23:12:20 new token ad871587-4587-4b7f-8663-0a425ee2f179 5ab27654a4bc71edeaab9d20
+23:12:24 anonym::: <User: 
+  _id = 5ab27654a4bc71edeaab9d20
+  deleted = False
+  created_time = 1521645140
+  updated_time = 1521645140
+  username = Anonym
+  password = Anonym
+  user_image = /uploads/default.png
+  bio = 
+  id = 5ab27654a4bc71edeaab9d20
+>
+23:12:24 new token fa6de53a-309e-45fb-a85e-3c0496f150c6 5ab27654a4bc71edeaab9d20
+23:12:34 anonym::: <User: 
+  _id = 5ab27654a4bc71edeaab9d20
+  deleted = False
+  created_time = 1521645140
+  updated_time = 1521645140
+  username = Anonym
+  password = Anonym
+  user_image = /uploads/default.png
+  bio = 
+  id = 5ab27654a4bc71edeaab9d20
+>
+23:12:34 new token 46bd708a-3297-4e91-af15-e95bc01df17f 5ab27654a4bc71edeaab9d20
+23:12:59 new token 8a5caad2-a5f1-4f87-9a0c-66d2c8d0fa93 5ab27654a4bc71edeaab9d20
+23:13:17 new token dcfb6e86-e5fa-41db-bd4e-4815268b9cd8 5ab27654a4bc71edeaab9d20
+23:13:22 check token dcfb6e86-e5fa-41db-bd4e-4815268b9cd8 5ab27654a4bc71edeaab9d20 True 5ab27654a4bc71edeaab9d20
+23:13:22 new token 99367379-1885-4935-9042-c60eb91a07f3 5ab27654a4bc71edeaab9d20
+23:13:23 new token 25034ee3-61e3-49a6-8465-ae0f24bc2d4e 5ab27654a4bc71edeaab9d20
+23:16:24 new token 3fdecc2e-1b71-4b50-909d-5268bb0a546c 5ab27748a4bc71ee9f1f356c

@@ -17,6 +17,7 @@ class User(Model):
             ('username', str, ''),
             ('password', str, ''),
             ('user_image', str, '/uploads/default.png'),
+            ('bio', str, ''),
         ]
         return names
 
@@ -59,3 +60,14 @@ class User(Model):
             password=User.salted_password(form['password'])
         )
         return user
+
+    @classmethod
+    def anonym(cls):
+        u = User.one(username='Anonym')
+        if u is None:
+            form = dict(
+                username='Anonym',
+                password='Anonym',
+            )
+            u = User.new(form)
+        return u
