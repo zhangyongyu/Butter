@@ -28,7 +28,8 @@ def index():
     t = render_template(
         "mail/index.html",
         sends=send_mail,
-        receives=received_mail
+        receives=received_mail,
+        user=u
     )
     return t
 
@@ -36,8 +37,9 @@ def index():
 @main.route("/view/<string:id>")
 def view(id):
     mail = Mail.one(id)
-    if current_user().id in [mail.receiver_id, mail.sender_id]:
+    u = current_user()
+    if u.id in [mail.receiver_id, mail.sender_id]:
     # if current_user().id == mail.receiver_id and current_user().id == mail.sender_id:
-        return render_template("mail/detail.html", mail=mail)
+        return render_template("mail/detail.html", mail=mail, user=u)
     else:
         return redirect(url_for(".index"))

@@ -1,3 +1,4 @@
+from flask import g
 # from models import Model
 from models import Model
 
@@ -16,6 +17,7 @@ class User(Model):
         names = names + [
             ('username', str, ''),
             ('password', str, ''),
+            ('nickname', str, ''),
             ('user_image', str, '/uploads/default.png'),
             ('bio', str, ''),
         ]
@@ -42,12 +44,14 @@ class User(Model):
     @classmethod
     def register(cls, form):
         name = form['username']
+        nickname = form['nickname']
         password = form['password']
-        if len(name) > 2 and User.one(username=name) is None:
+        if len(name) > 2 and len(nickname)>2 and User.one(username=name) is None:
             password = User.salted_password(password)
             u = User.new(dict(
                 username=name,
                 password=password,
+                nickname=nickname,
             ))
             return u
         else:
@@ -68,6 +72,7 @@ class User(Model):
             form = dict(
                 username='Anonym',
                 password='Anonym',
+                nickname='匿名用户',
             )
             u = User.new(form)
         return u

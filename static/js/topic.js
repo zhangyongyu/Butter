@@ -1,4 +1,4 @@
-var initedEditor = function() {
+var loadEditor = function() {
     var e = new Editor()
     var element = $('.editor').get(0)
     e.render(element)
@@ -6,7 +6,7 @@ var initedEditor = function() {
 }
 
 var __main = function() {
-    initedEditor()
+    loadEditor()
 }
 
 $(document).ready(function() {

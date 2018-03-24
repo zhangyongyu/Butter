@@ -8,13 +8,14 @@ from flask import (
     make_response,
     send_from_directory,
     abort,
+    g,
 )
 from werkzeug.utils import secure_filename
 from models.user import User
 import os
 import uuid
 
-from routes import current_user
+from routes import *
 from utils import log
 from models.topic import Topic
 from models.board import Board
@@ -34,32 +35,50 @@ main = Blueprint('index', __name__)
 
 @main.route("/")
 def index():
-    return redirect(url_for('topic.index'))
-
-@main.route("/register", methods=['POST'])
-def register():
-    form = request.form
-    # 用类函数来判断
-    u = User.register(form)
-    return redirect(url_for('.index'))
-
-
-@main.route("/login", methods=['POST'])
-def login():
-    form = request.form
-    u = User.validate_login(form)
-    print('login u', u)
-    if u is None:
-        # 转到 topic.index 页面
-        return redirect(url_for('topic.index'))
+    board_id = request.args.get('board_id', 'all')
+    if board_id == 'all':
+        ms = Topic.all()
     else:
-        # session 中写入 user_id
-        session['user_id'] = u.id
-        print('login', session)
-        # 设置 cookie 有效期为 永久
-        session.permanent = True
-        return redirect(url_for('topic.index'))
+        ms = Topic.all(board_id=board_id)
 
+    token = new_csrf_token()
+    bs = Board.all()
+    u = current_user()
+    return render_template("topic/index.html", ms=ms, token=token, bs=bs, bid=board_id, user = u)
+
+
+@main.route("/register", methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        form = request.form
+        # 用类函数来判断
+        u = User.register(form)
+        log('u:::', u)
+        return redirect(url_for('index.login'))
+    else:
+        u = current_user()
+        return render_template("register.html", user=u)
+
+
+@main.route("/login", methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        form = request.form
+        u = User.validate_login(form)
+        print('login u', u)
+        if u is None:
+            # 转到 topic.index 页面
+            return redirect(url_for('topic.index'))
+        else:
+            # session 中写入 user_id
+            session['user_id'] = u.id
+            print('login', session)
+            # 设置 cookie 有效期为 永久
+            session.permanent = True
+            return redirect(url_for('topic.index'))
+    else:
+        u = current_user()
+        return render_template("login.html", user=u)
 
 @main.route('/profile')
 def profile():

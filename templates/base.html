@@ -5,29 +5,32 @@
 
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="https://abs.twimg.com/a/1521097473/css/t1/twitter_core.bundle.css"
+    <link rel="stylesheet" href="/static/css/core.css"
           class="coreCSSBundles">
     <link rel="stylesheet" class="moreCSSBundles"
-          href="https://abs.twimg.com/a/1521097473/css/t1/twitter_more_1.bundle.css">
+          href="/static/css/more1.css">
     <link rel="stylesheet" class="moreCSSBundles"
-          href="https://abs.twimg.com/a/1521097473/css/t1/twitter_more_2.bundle.css">
+          href="/static/css/more2.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+    <script src="//cdn.bootcss.com/prism/1.8.0/prism.js"></script>
+    <script src="//cdn.bootcss.com/prism/1.8.1/components/prism-python.min.js"></script>
+    <link href="//cdn.bootcss.com/prism/1.8.0/themes/prism.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css" />
+    <script type="text/javascript" src="http://lab.lepture.com/editor/editor.js"></script>
+    <script type="text/javascript" src="http://lab.lepture.com/editor/marked.js"></script>
 
-    <link rel="dns-prefetch" href="https://pbs.twimg.com">
-    <link rel="dns-prefetch" href="https://t.co">
 
     <title>黄油绘本-{% block title %}{% endblock %}</title>
 
 
-    <meta name="msapplication-TileImage" content="//abs.twimg.com/favicons/win8-tile-144.png"/>
-    <meta name="msapplication-TileColor" content="#00aced"/>
-
-
     <link rel="mask-icon" sizes="any" href="" color="#1da1f2">
 
-    <link rel="shortcut icon" href="//abs.twimg.com/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://abs.twimg.com/icons/apple-touch-icon-192x192.png" sizes="192x192">
+    <link rel="shortcut icon" href="/static/img/butter_logo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/static/img/butter_logo.png" sizes="192x192">
 
     <link rel="manifest" href="/manifest.json">
 
@@ -35,574 +38,12 @@
     <meta name="swift-page-name" id="swift-page-name" content="home">
     <meta name="swift-page-section" id="swift-section-name" content="home">
 
-    <link rel="canonical" href="https://twitter.com/">
-
 
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Twitter">
 
     <link id="async-css-placeholder">
 
-    <style id="user-style-zyy93">
 
-  a,
-  a:hover,
-  a:focus,
-  a:active {
-    color: #77C0D8;
-  }
-
-  .u-textUserColor,
-  .u-textUserColorHover:hover,
-  .u-textUserColorHover:hover .ProfileTweet-actionCount,
-  .u-textUserColorHover:focus {
-    color: #77C0D8 !important;
-  }
-
-  .u-borderUserColor,
-  .u-borderUserColorHover:hover,
-  .u-borderUserColorHover:focus {
-    border-color: #77C0D8 !important;
-  }
-
-  .u-bgUserColor,
-  .u-bgUserColorHover:hover,
-  .u-bgUserColorHover:focus {
-    background-color: #77C0D8 !important;
-  }
-
-  .u-dropdownUserColor > li:hover,
-  .u-dropdownUserColor > li:focus,
-  .u-dropdownUserColor > li > button:hover,
-  .u-dropdownUserColor > li > button:focus,
-  .u-dropdownUserColor > li > a:focus,
-  .u-dropdownUserColor > li > a:hover {
-    color: #fff !important;
-    background-color: #77C0D8 !important;
-  }
-
-  .u-boxShadowInsetUserColorHover:hover,
-  .u-boxShadowInsetUserColorHover:focus {
-    box-shadow: inset 0 0 0 5px #77C0D8 !important;
-  }
-
-  .u-dropdownOpenUserColor.dropdown.open .dropdown-toggle {
-    color: #77C0D8;
-  }
-
-
-  .u-textUserColorLight {
-    color: #C8E5EF !important;
-  }
-
-  .u-borderUserColorLight,
-  .u-borderUserColorLightFocus:focus,
-  .u-borderUserColorLightHover:hover,
-  .u-borderUserColorLightHover:focus {
-    border-color: #C8E5EF !important;
-  }
-
-  .u-bgUserColorLight {
-    background-color: #C8E5EF !important;
-  }
-
-
-  .u-boxShadowUserColorLighterFocus:focus {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), inset 0 1px 2px rgba(119,192,216,0.25) !important;
-  }
-
-
-  .u-textUserColorLightest {
-    color: #F1F8FB !important;
-  }
-
-  .u-borderUserColorLightest {
-    border-color: #F1F8FB !important;
-  }
-
-  .u-bgUserColorLightest {
-    background-color: #F1F8FB !important;
-  }
-
-
-  .u-textUserColorLighter {
-    color: #DDEFF5 !important;
-  }
-
-  .u-borderUserColorLighter {
-    border-color: #DDEFF5 !important;
-  }
-
-  .u-bgUserColorLighter {
-    background-color: #DDEFF5 !important;
-  }
-
-
-  .u-bgUserColorDarkHover:hover {
-    background-color: #64A1B7 !important;
-  }
-
-  .u-borderUserColorDark {
-    border-color: #64A1B7 !important;
-  }
-
-
-  .u-bgUserColorDarkerActive:active {
-    background-color: #528397 !important;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-a,
-.btn-link,
-.btn-link:focus,
-.icon-btn,
-
-
-
-.pretty-link b,
-.pretty-link:hover s,
-.pretty-link:hover b,
-.pretty-link:focus s,
-.pretty-link:focus b,
-
-.metadata a:hover,
-.metadata a:focus,
-
-a.account-group:hover .fullname,
-a.account-group:focus .fullname,
-.account-summary:focus .fullname,
-
-.message .message-text a,
-.message .message-text button,
-.stats a strong,
-.plain-btn:hover,
-.plain-btn:focus,
-.dropdown.open .user-dropdown.plain-btn,
-.open > .plain-btn,
-#global-actions .new:before,
-.module .list-link:hover,
-.module .list-link:focus,
-
-.stats a:hover,
-.stats a:hover strong,
-.stats a:focus,
-.stats a:focus strong,
-
-.find-friends-sources li:hover .source,
-
-
-
-
-
-.stream-item a:hover .fullname,
-.stream-item a:focus .fullname,
-
-.stream-item .view-all-supplements:hover,
-.stream-item .view-all-supplements:focus,
-
-.tweet .time a:hover,
-.tweet .time a:focus,
-.tweet .details.with-icn b,
-.tweet .details.with-icn .Icon,
-
-.stream-item:hover .original-tweet .details b,
-.stream-item .original-tweet.focus .details b,
-.stream-item.open .original-tweet .details b,
-
-.client-and-actions a:hover,
-.client-and-actions a:focus,
-
-.dismiss-btn:hover b,
-
-.tweet .context .pretty-link:hover s,
-.tweet .context .pretty-link:hover b,
-.tweet .context .pretty-link:focus s,
-.tweet .context .pretty-link:focus b,
-
-.list .username a:hover,
-.list .username a:focus,
-.list-membership-container .create-a-list,
-.list-membership-container .create-a-list:hover,
-.new-tweets-bar,
-
-
-
-.card .list-details a:hover,
-.card .list-details a:focus,
-.card .card-body:hover .attribution,
-.card .card-body .attribution:focus {
-  color: #77C0D8;
-}
-
-
-
-    #global-actions > li > a {
-      border-bottom-color: #77C0D8;
-    }
-
-    #global-actions > li:hover > a,
-    #global-actions > li > a:focus,
-    #global-actions > li.active .text,
-    .DashUserDropdown.dropdown-menu .nightmode-toggle .Icon,
-    .nav.right-actions > li > a:hover,
-    .nav.right-actions > li > a:focus {
-      color: #77C0D8;
-    }
-
-
-      #global-actions .people.new:before {
-        content: none;
-      }
-
-
-  .FoundMediaSearch--keyboard .FoundMediaSearch-focusable.is-focused {
-    border-color: #77C0D8;
-  }
-
-
-  .photo-selector:hover .btn,
-  .icon-btn:hover,
-  .icon-btn:active,
-  .icon-btn.active,
-  .icon-btn.enabled {
-    border-color: #77C0D8;
-    border-color: rgba(119,192,216,0.4);
-    color: #77C0D8;
-  }
-
-
-  .photo-selector:hover .btn,
-  .icon-btn:hover {
-    background-image: linear-gradient(rgba(255,255,255,0), rgba(119,192,216,0.1));
-  }
-
-  .icon-btn.disabled,
-  .icon-btn.disabled:hover,
-  .icon-btn[disabled],
-  .icon-btn[aria-disabled=true] {
-    color: #77C0D8;
-  }
-
-
-
-
-  .EdgeButton--primary,
-  .EdgeButton--primary:focus {
-    background-color: #92CCDF;
-    border-color: transparent;
-  }
-
-  .EdgeButton--primary:hover,
-  .EdgeButton--primary:active {
-    background-color: #77C0D8;
-    border-color: #77C0D8;
-  }
-
-  .EdgeButton--primary:focus {
-    box-shadow:
-      0 0 0 2px #FFFFFF,
-      0 0 0 4px #C8E5EF;
-  }
-
-  .EdgeButton--primary:active {
-    box-shadow:
-      0 0 0 2px #FFFFFF,
-      0 0 0 4px #92CCDF;
-  }
-
-
-
-
-  .EdgeButton--secondary,
-  .EdgeButton--secondary:hover,
-  .EdgeButton--secondary:focus,
-  .EdgeButton--secondary:active {
-    border-color: #77C0D8;
-    color: #77C0D8;
-  }
-
-  .EdgeButton--secondary:hover,
-  .EdgeButton--secondary:active {
-    background-color: #F1F8FB;
-  }
-
-  .EdgeButton--secondary:focus {
-    box-shadow:
-      0 0 0 2px #FFFFFF,
-      0 0 0 4px rgba(119,192,216,0.4);
-  }
-
-  .EdgeButton--secondary:active {
-    box-shadow:
-      0 0 0 2px #FFFFFF,
-      0 0 0 4px #77C0D8;
-  }
-
-
-
-
-  .EdgeButton--invertedPrimary {
-    color: #77C0D8 !important;
-  }
-
-  .EdgeButton--invertedPrimary:focus {
-    box-shadow:
-      0 0 0 2px #77C0D8,
-      0 0 0 4px #C8E5EF;
-  }
-
-  .EdgeButton--invertedPrimary:active {
-    box-shadow:
-      0 0 0 2px #77C0D8,
-      0 0 0 4px #FFFFFF;
-  }
-
-
-
-
-  .EdgeButton--invertedSecondary {
-    background-color: #77C0D8;
-  }
-
-  .EdgeButton--invertedSecondary:hover {
-    background-color: #92CCDF;
-  }
-
-  .EdgeButton--invertedSecondary:focus {
-    box-shadow:
-      0 0 0 2px #77C0D8,
-      0 0 0 4px #C8E5EF;
-  }
-
-  .EdgeButton--invertedSecondary:active {
-    box-shadow:
-      0 0 0 2px #77C0D8,
-      0 0 0 4px #FFFFFF;
-  }
-
-
-
-  .btn:focus,
-  .btn.focus,
-  .Button:focus,
-  .EmojiPicker-item.is-focused,
-  .EmojiPicker .EmojiCategoryIcon:focus,
-  .EmojiPicker-skinTone:focus + .EmojiPicker-skinToneSwatch,
-  a:focus > img:first-child:last-child,
-  button:focus {
-    box-shadow:
-      0 0 0 2px #FFFFFF,
-      0 0 2px 4px rgba(119,192,216,0.4);
-  }
-
-  .selected-stream-item:focus {
-    box-shadow: 0 0 0 3px rgba(119,192,216,0.4);
-  }
-
-
-  .js-navigable-stream.stream-table-view .selected-stream-item[tabindex="-1"]:focus {
-    outline: 3px solid rgba(119,192,216,0.4) !important;
-  }
-
-
-  .js-navigable-stream.stream-table-view .selected-stream-item:focus {
-    box-shadow: none;
-  }
-
-
-
-  .global-dm-nav.new.with-count .dm-new .count-inner {
-    background: #77C0D8;
-  }
-
-  .global-nav .people .count .count-inner {
-    background: #77C0D8;
-  }
-
-  .dropdown-menu li > a:hover,
-  .dropdown-menu li > a:focus,
-  .dropdown-menu .dropdown-link:hover,
-  .dropdown-menu .dropdown-link:focus,
-  .dropdown-menu .dropdown-link.is-focused,
-  .dropdown-menu li:hover .dropdown-link,
-  .dropdown-menu li:focus .dropdown-link,
-  .dropdown-menu .selected a,
-  .dropdown-menu .dropdown-link.selected {
-    background-color: #77C0D8 !important;
-  }
-
-  /* for items in typeahead dropdown menu on logged in pages */
-  .dropdown-menu .typeahead-items li > a:focus,
-  .dropdown-menu .typeahead-items li > a:hover,
-  .dropdown-menu .typeahead-items .selected,
-  .dropdown-menu .typeahead-items .selected a {
-    background-color: #F1F8FB !important;
-    color: #77C0D8 !important;
-  }
-
-  .typeahead a:hover,
-  .typeahead a:hover strong,
-  .typeahead a:hover .fullname,
-  .typeahead .selected a,
-  .typeahead .selected strong,
-  .typeahead .selected .fullname,
-  .typeahead .selected .Icon--close {
-    color: #77C0D8 !important;
-  }
-
-
-.home-tweet-box,
-.LiveVideo-tweetBox,
-.RetweetDialog-commentBox {
-  background-color: #F1F8FB;
-}
-
-.top-timeline-tweetbox .timeline-tweet-box .tweet-form.condensed .tweet-box {
-  color: #77C0D8;
-}
-
-.RichEditor,
-.TweetBoxAttachments {
-  border-color: #DDEFF5;
-}
-
-input:focus,
-textarea:focus,
-div[contenteditable="true"]:focus,
-div[contenteditable="true"].fake-focus,
-div[contenteditable="plaintext-only"]:focus,
-div[contenteditable="plaintext-only"].fake-focus {
-  border-color: #C8E5EF;
-  box-shadow: inset 0 0 0 1px rgba(119,192,216,0.7);
-}
-
-.tweet-box textarea:focus,
-.tweet-box input[type=text],
-.currently-dragging .tweet-form.is-droppable .tweet-drag-help,
-.tweet-box[contenteditable="true"]:focus,
-.RichEditor.is-fakeFocus,
-.RichEditor.is-fakeFocus ~ .TweetBoxAttachments {
-  border-color: #C8E5EF;
-  box-shadow: 0 0 0 1px #C8E5EF;
-}
-
-.MomentCapsuleItem.selected-stream-item:focus {
-  box-shadow: 0 0 0 3px rgba(119,192,216,0.4);
-}
-
-
-
-
-s,
-.pretty-link:hover s,
-.pretty-link:focus s,
-.stream-item-activity-notification .latest-tweet .tweet-row a:hover s,
-.stream-item-activity-notification .latest-tweet .tweet-row a:focus s {
-    color: #77C0D8;
-}
-
-
-
-.vellip,
-.vellip:before,
-.vellip:after,
-.conversation-module > li:after,
-.conversation-module > li:before,
-.ThreadedConversation--loneTweet:after,
-.ThreadedConversation-tweet:not(.is-hiddenAncestor) ~ .ThreadedConversation-tweet:before,
-.ThreadedConversation-tweet:after,
-.ThreadedConversation-moreReplies:before,
-.ThreadedConversation-viewOther:before,
-.ThreadedConversation-unavailableTweet:before,
-.ThreadedConversation-unavailableTweet:after,
-.ThreadedConversation--permalinkTweetWithAncestors:before,
-.mini-avatar-with-thread:before,
-.permalink.self-thread-permalink-with-descendant .permalink-tweet-container:after,
-.permalink.self-thread-permalink-with-descendant .inline-reply-tweetbox-container:after {
-    border-color: #C8E5EF;
-}
-
-
-
-
-.tweet .sm-reply,
-.tweet .sm-rt,
-.tweet .sm-fav,
-.tweet .sm-image,
-.tweet .sm-video,
-.tweet .sm-audio,
-.tweet .sm-geo,
-.tweet .sm-in,
-.tweet .sm-trash,
-.tweet .sm-more,
-.tweet .sm-page,
-.tweet .sm-embed,
-.tweet .sm-summary,
-.tweet .sm-chat,
-
-.timelines-navigation .active .profile-nav-icon,
-.timelines-navigation .profile-nav-icon:hover,
-.timelines-navigation .profile-nav-link:focus .profile-nav-icon,
-
-.sm-top-tweet {
-    background-color: #77C0D8;
-}
-
-.enhanced-mini-profile .mini-profile .profile-summary {
-  background-image: url(https://abs.twimg.com/a/1521097473/img/t1/grey_header_web.jpg);
-}
-
-  #global-tweet-dialog .modal-header,
-  #Tweetstorm-dialog .modal-header {
-    border-bottom: solid 1px rgba(119,192,216,0.25);
-  }
-
-  #global-tweet-dialog .modal-tweet-form-container,
-  #Tweetstorm-dialog .modal-body {
-    background-color: #77C0D8;
-    background: rgba(119,192,216,0.1);
-  }
-
-  .TweetstormDialog-reply-context .tweet-box-avatar:after,
-  .TweetstormDialog-reply-context .tweet-box-avatar:before,
-  .TweetstormDialog-tweet-box .tweet-box-avatar:after,
-  .TweetstormDialog-tweet-box .tweet-box-avatar:before {
-    border-color: #C8E5EF;
-  }
-
-  .global-nav .search-input:focus,
-  .global-nav .search-input.focus {
-    border: 2px solid #77C0D8;
-  }
-}
-
-  .inline-reply-tweetbox {
-    background-color: #F1F8FB;
-  }
-
-
-    </style>
-
-
-    <style id="user-style-zyy93-header-img" class="js-user-style-header-img">
-
-    body.user-style-zyy93 .enhanced-mini-profile .mini-profile .profile-summary {
-      background-image: url(https://abs.twimg.com/a/1521097473/img/t1/grey_header_web.jpg);
-    }
-
-
-
-    </style>
 
 
 </head>
@@ -637,23 +78,16 @@ s,
 
                     <div role="navigation" style="display: inline-block;">
                         <ul class="nav js-global-actions" id="global-actions">
-                            <li id="global-nav-home" class="home active" data-global-action="home">
+                            <li id="global-nav-home" class="home {% if request.path in ['/topic/','/'] %} active {% endif %}" data-global-action="home">
                                 <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="/"
                                    data-component-context="home_nav" data-nav="home">
-                                    <span class="Icon Icon--home Icon--large"></span>
-                                    <span class="Icon Icon--homeFilled Icon--large u-textUserColor"></span>
-                                    <span class="text" aria-hidden="true">主页</span>
-                                    <span class="u-hiddenVisually a11y-inactive-page-text">主页</span>
-                                    <span class="u-hiddenVisually a11y-active-page-text">主页，当前页。</span>
-                                    <span class="u-hiddenVisually hidden-new-items-text">有新推文。</span>
+                                    <span class="text" style="font-size:1.2em">主页</span>
                                 </a>
                             </li>
-                            <li class="dm-nav">
+                            <li class="dm-nav {% if request.path in ['/mail/'] %} active {% endif %}" data-global-action="home">
                                 <a role="button" href="{{url_for('mail.index')}}" class="js-tooltip js-dynamic-tooltip global-dm-nav"
                                    data-placement="bottom">
-                                    <span class="Icon Icon--dm Icon--large"></span>
-                                    <span class="text">私信</span>
-                                    <span class="dm-new"><span class="count-inner"></span></span>
+                                    <span class="text" style="font-size:1.2em">私信</span>
                                 </a>
                             </li>
                         </ul>
@@ -661,112 +95,28 @@ s,
 
                     <div class="pull-right nav-extras">
 
-
+                        {% if user != None %}
                         <ul class="nav right-actions">
                             <li class="me dropdown session js-session" data-global-action="t1me" id="user-dropdown">
-                                <a href="/settings" class="btn js-tooltip settings dropdown-toggle js-dropdown-toggle"
+                                <a href="{{ url_for('index.settings') }}" class="btn js-tooltip settings dropdown-toggle js-dropdown-toggle"
                                    id="user-dropdown-toggle" title="个人资料与账号" data-placement="bottom" rel="noopener">
                                     <img class="Avatar Avatar--size32"
-                                         src="https://pbs.twimg.com/profile_images/923237531977519104/mq-doDiM_normal.jpg"
-                                         alt="个人资料与账号" data-user-id="1910048959">
+                                         src="{{ user.user_image }}"
+                                         alt="个人资料与账号">
                                 </a>
-                                <div class="DashUserDropdown dropdown-menu dropdown-menu--rightAlign is-forceRight is-autoCentered">
 
-
-                                    <ul>
-
-
-                                        <li class="DashUserDropdown-userInfo" data-name="user-info">
-                                            <a href="/zyy93" class="DashUserDropdown-userInfoLink js-nav"
-                                               data-nav="view_profile">
-                                                <b class="fullname">啊钰</b><span class="UserBadges"></span>
-                                                <p class="name"><span class="username u-dir u-textTruncate"
-                                                                      dir="ltr">@<b>zyy93</b></span></p>
-                                            </a>
-                                        </li>
-
-                                        <li class="dropdown-divider"></li>
-
-                                        <li class="current-user" data-name="profile">
-                                            <a href="/zyy93" class="js-nav" data-nav="view_profile">
-                                                <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--me"></span>个人资料
-                                            </a>
-                                        </li>
-
-                                        <li data-name="lists">
-                                            <a class="js-nav" href="/zyy93/lists" data-nav="all_lists">
-                                                <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--list"></span>列表
-                                            </a>
-                                        </li>
-
-
-                                        <li class="dropdown-divider"></li>
-
-
-                                        <li>
-                                            <a href="https://ads.twitter.com/?ref=gl-tw-tw-twitter-ads" target="_blank"
-                                               data-nav="ads" rel="noopener">
-                                                <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--promotedStroked"></span>Twitter
-                                                广告
-                                            </a>
-                                        </li>
-
-
-                                        <li>
-                                            <a class="user-dropdown-analytics" href="https://analytics.twitter.com/"
-                                               target="_blank" data-nav="user_dropdown_analytics" rel="noopener">
-                                                <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--analytics"></span>分析
-                                            </a>
-                                        </li>
-
-
-                                        <li class="dropdown-divider"></li>
-
-
-                                        <li><a href="/settings" data-nav="settings" class="js-nav"
-                                               rel="noopener">设置和隐私</a></li>
-
-
-                                        <li><a href="//support.twitter.com" data-nav="help_center"
-                                               rel="noopener">帮助中心</a></li>
-
-
-                                        <li class="js-keyboard-shortcut-trigger" data-nav="shortcuts">
-                                            <button type="button" class="dropdown-link">键盘快捷键</button>
-                                        </li>
-
-
-                                        <li class="js-signout-button" id="signout-button" data-nav="logout">
-                                            <button type="button" class="dropdown-link">登出</button>
-                                            <form class="t1-form dropdown-link-form signout-form" id="signout-form"
-                                                  action="/logout" method="POST">
-                                                <input type="hidden" value="d0458cbc1eb0a2e70173ad5f8bd6a186ce4096bc"
-                                                       name="authenticity_token" class="authenticity_token">
-                                                <input type="hidden" name="reliability_event"
-                                                       class="js-reliability-event">
-                                                <input type="hidden" name="scribe_log">
-                                            </form>
-                                        </li>
-
-
-                                        <li class="dropdown-divider"></li>
-                                        <li class="current-user nightmode-toggle" data-name="profile">
-                                            <a class="js-nav" data-nav="view_profile">
-          <span class="DashUserDropdown-linkIcon Icon Icon--medium js-nightmode-icon
-            Icon--crescent
-            ">
-          </span><span class="js-nightmode-label">夜间模式</span>
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </div>
 
                             </li>
                             <li role="complementary" aria-labelledby="global-new-tweet-button" class="topbar-tweet-btn">
                                 <a href='{{url_for("topic.new")}}' class="button1 button-primary1 button-pill1 button-normal1" style="padding:10px 20px; color:white;"> 发帖 </a>
                             </li>
                         </ul>
+                        {% else %}
+                        <ul class="nav right-actions">
+                            <li><button>x</button></li>
+                            <li><button>x</button></li>
+                        </ul>
+                        {% endif %}
                     </div>
 
 
@@ -775,8 +125,66 @@ s,
         </div>
     </div>
 
+
 {% block main %}{% endblock %}
-
-
+</div>
 </body>
+
+
+<script>
+    var e = function (sel) {
+            return document.querySelector(sel)
+        }
+
+        var es = function (sel) {
+            return document.querySelectorAll(sel)
+        }
+
+        var markContents = function () {
+            var contentDivs = es('.markdown-text')
+            for (var i = 0; i < contentDivs.length; i++) {
+                var contentDiv = contentDivs[i]
+                console.log('pre marked', contentDiv.textContent, contentDiv.innerHTML)
+                var content = marked(contentDiv.textContent)
+                console.log('after marked', content)
+                contentDiv.innerHTML = content
+            }
+        }
+
+        var highlight = function () {
+            var code_list = es('pre code')
+            for (var i = 0; i < code_list.length; i++) {
+                var code = code_list[i]
+                code.className = code.className.replace('lang', 'language')
+            }
+        }
+
+        var registerTimer = function () {
+            setInterval(function () {
+                var times = es('.injury-time')
+                for (var i = 0; i < times.length; i++) {
+                    var t = times[i]
+                    var time = Number(t.dataset.ct)
+                    var now = Math.floor(new Date() / 1000)
+                    var delta = now - time
+                    var s = `${delta} 秒前`
+                    t.innerText = s
+                }
+            }, 1000)
+        }
+
+
+        var __main = function () {
+            markContents()
+            registerTimer()
+            highlight()
+        }
+
+        __main()
+</script>
+    <script src="/static/js/topic.js"></script>
+
+{% block js %}{% endblock %}
+
+
 </html>

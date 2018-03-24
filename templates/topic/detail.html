@@ -3,18 +3,14 @@
 帖子详情 {{ topic.title }}
 {% endblock %}
 {% block main %}
-<div id="main" style="margin-top:70px">
-    <div id="content">
+<div class="main">
+    <div >
         <div class='panel'>
             <div class='header topic_header'>
         <span class="topic_full_title">
 			{{ topic.title }}
       	</span>
                 <div class="changes">
-            <span>
-                发布于 2 天前
-            </span>
-
                     <span>
           	    {{ topic.views }} 次浏览
         	</span>
@@ -23,9 +19,7 @@
 
             <div class='inner topic'>
                 <div class='topic_content'>
-                    <div class="markdown-text">
-                        {{ topic.content }}
-                    </div>
+                    <div class="markdown-text">{{ topic.content }}</div>
                 </div>
             </div>
         </div>
@@ -50,7 +44,7 @@
                         {{ r.user().username }}
                     </a>
                     <a class="reply_time">
-                        {{ loop.index }}楼 • 2 天前
+                        {{ loop.index }}楼
                     </a>
                 </div>
                 <div class='user_action'>
@@ -70,21 +64,25 @@
             </div>
         </div>
         {% endfor %}
-        <div style="padding: 10px 0">
+        <div class="inner" style="padding: 10px 0;margin:20px 0 10px">
             <form method="post" action="{{ url_for('reply.add') }}" >
 
                 <input type="hidden" name="topic_id" value="{{ topic.id }}">
-                <div class='markdown_editor in_editor'>
-                                <div class='markdown_in_editor'>
-                                    <textarea class='editor' name='content' rows='20'
-                                              placeholder=''></textarea>
-                                    <div class='editor_buttons'>
-                                        <input type="submit" class='span-primary submit_btn' data-loading-text="提交中"
-                                               value="发表回复">
-                                    </div>
-                                </div>
-                            </div>
+
+                <textarea class='editor' name='content' rows='5'
+                          placeholder=''>
+                </textarea>
+
+                <div class='editor_buttons'>
+                    <input type="submit" class='span-primary submit_btn' data-loading-text="提交中"
+                           value="发表回复">
+                </div>
+
             </form>
         </div>
     </div>
+</div>
+{% endblock %}
+
+{% block js %}
 {% endblock %}

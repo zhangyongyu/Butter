@@ -25,14 +25,16 @@ def index():
 
     token = new_csrf_token()
     bs = Board.all()
-    return render_template("topic/index.html", ms=ms, token=token, bs=bs, bid=board_id)
+    u = current_user()
+    return render_template("topic/index.html", ms=ms, token=token, bs=bs, bid=board_id, user = u)
 
 
 @main.route('/<string:id>')
 def detail(id):
     m = Topic.find(id=id)
+    u = current_user()
     # 传递 topic 的所有 reply 到 页面中
-    return render_template("topic/detail.html", topic=m)
+    return render_template("topic/detail.html", topic=m, user=u)
 
 
 @main.route("/add", methods=["POST"])
@@ -60,4 +62,5 @@ def new():
     board_id = request.args.get('board_id')
     token = new_csrf_token()
     bs = Board.all()
-    return render_template("topic/new.html", bs=bs, token=token, bid=board_id)
+    u = current_user()
+    return render_template("topic/new.html", bs=bs, token=token, bid=board_id, user=u)

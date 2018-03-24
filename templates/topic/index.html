@@ -11,31 +11,42 @@
             <div class="DashboardProfileCard  module">
 
                 <a class="DashboardProfileCard-bg u-bgUserColor u-block"
-                   href="/zyy93"
+                   href="{{url_for('index.settings')}}"
                    tabindex="-1"
                    aria-hidden="true"
                    rel="noopener">
                 </a>
                 <div class="DashboardProfileCard-content" style="padding-bottom: 30px">
 
-                    <a class="DashboardProfileCard-avatarLink u-inlineBlock" href="/zyy93" title="啊钰" tabindex="-1"
+                    <a class="DashboardProfileCard-avatarLink u-inlineBlock" href="{{url_for('index.settings')}}" tabindex="-1"
                        aria-hidden="true" rel="noopener">
                         <img class="DashboardProfileCard-avatarImage js-action-profile-avatar"
-                             src="https://pbs.twimg.com/profile_images/923237531977519104/mq-doDiM_bigger.jpg"
+                             src="{{ user.user_image }}"
                              alt="">
                     </a>
 
                     <div class="DashboardProfileCard-userFields account-group">
                         <div class="DashboardProfileCard-name u-textTruncate">
-                            <a class="u-textInheritColor js-nav" href="/zyy93" rel="noopener">啊钰</a><span
+                            <a class="u-textInheritColor js-nav" href="{{url_for('index.profile')}}" rel="noopener">{{ user.nickname }}</a><span
                                 class="UserBadges"></span>
                         </div>
                         <div class="DashboardProfileCard-screenname u-inlineBlock u-dir " dir="ltr">
                             <a class="DashboardProfileCard-screennameLink u-linkComplex u-linkClean js-nav"
-                               href="/zyy93" rel="noopener"><span class="username u-dir" dir="ltr">@<b
-                                    class="u-linkComplex-target">zyy93</b></span></a>
+                               href="{{url_for('index.profile')}}" rel="noopener"><span class="username u-dir" dir="ltr">@<b
+                                    class="u-linkComplex-target">{{ user.username }}</b></span></a>
                         </div>
                     </div>
+                    {% if user.username == 'Anonym' %}
+                    <div style="margin:40px 20px 0">
+                        <div style="margin: 10px 10px 0;text-align: center;">
+                            <p style="color: #647786;">您尚未登录哦~ <br>登录或注册账号参与更多讨论</p>
+                            <div style="margin:15px 0 0">
+                                <a href='{{url_for("index.login")}}' class="button1 button-primary1 button-pill1 button-normal1" style="color:white;"> 登录 </a>
+                                <a href='{{url_for("index.register")}}' class="button1 button-primary1 button-pill1 button-normal1" style="color:white;"> 注册 </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
 
                 </div>
             </div>
@@ -89,10 +100,6 @@
                                 <a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}">
                                     {{ t.title }}
                                 </a>
-                                <!--<a class="topic_title"-->
-                                   <!--href="{{ url_for('topic.delete', id=t.id, token=token) }}">-->
-                                    <!--删除-->
-                                <!--</a>-->
 
                                 <span class="pull-right">
 
@@ -100,24 +107,16 @@
                                             data-modal="ProfileTweet-reply" type="button"
                                             aria-describedby="profile-tweet-action-reply-count-aria-975283593747582976">
                                     <div class="IconContainer js-tooltip" data-original-title="回复">
-                                      <span class="Icon Icon--medium Icon--reply"></span>
-                                      <span class="u-hiddenVisually">回复</span>
+                                      <span><i class="fa fa-comments"></i> {{ t.replies() | count }}</span>
                                     </div>
-                                      <span class="ProfileTweet-actionCount ">
-                                        <span class="ProfileTweet-actionCountForPresentation">{{ t.replies() | count }} </span>
-                                      </span>
                                     </button>
 
                                      <button class="ProfileTweet-actionButton js-actionButton js-actionReply"
                                              data-modal="ProfileTweet-reply" type="button"
                                              aria-describedby="profile-tweet-action-reply-count-aria-975283593747582976">
                                         <div class="IconContainer js-tooltip" data-original-title="回复">
-                                          <span class="Icon Icon--medium Icon--promotedTrend"></span>
-                                          <span class="u-hiddenVisually">浏览数</span>
+                                            <span><i class="fa fa-eye"></i> {{ t.views }}</span>
                                         </div>
-                                          <span class="ProfileTweet-actionCount ">
-                                            <span class="ProfileTweet-actionCountForPresentation">{{ t.views }}</span>
-                                          </span>
                                     </button>
                                 </span>
 
@@ -173,17 +172,19 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <!--<script>-->
+        <!--(function () {-->
+            <!--var editor = new Editor();-->
+            <!--editor.render($('.editor')[0]);-->
+        <!--})();-->
 
 
-                <script>
-        (function () {
-            var editor = new Editor();
-            editor.render($('.editor')[0]);
-        })();
 
 
 
-
-
-                </script>
+                <!--</script>-->
                 {% endblock %}

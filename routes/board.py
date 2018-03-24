@@ -16,7 +16,8 @@ main = Blueprint('board', __name__)
 
 @main.route("/admin")
 def index():
-    return render_template('board/admin_index.html')
+    u = current_user()
+    return render_template('board/admin_index.html', user=u)
     ...
 
 
