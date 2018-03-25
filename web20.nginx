@@ -1,7 +1,7 @@
 server {
     listen 80;
 
-    location /static {
+    location /test {
         proxy_pass http://localhost:3000;
     }
 
