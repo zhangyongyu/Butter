@@ -89,7 +89,7 @@ def profile():
 
 
 def valid_suffix(suffix):
-    valid_type = ['jpg', 'png', 'jpeg']
+    valid_type = ['jpg', 'png', 'jpeg','JPG','PNG','JPEG']
     return suffix in valid_type
 
 
@@ -159,8 +159,9 @@ def add_img():
         User.update(u.id, dict(
             user_image='/uploads/{}'.format(filename)
         ))
+        log('u.img:::', u.user_image)
 
-    return redirect(url_for(".profile"))
+    return redirect(url_for(".settings"))
 
 
 # send_from_directory
