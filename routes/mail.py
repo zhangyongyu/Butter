@@ -36,7 +36,7 @@ def index():
 
 @main.route("/view/<string:id>")
 def view(id):
-    mail = Mail.one(id)
+    mail = Mail.one(id=id)
     u = current_user()
     if u.id in [mail.receiver_id, mail.sender_id]:
     # if current_user().id == mail.receiver_id and current_user().id == mail.sender_id:

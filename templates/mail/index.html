@@ -5,23 +5,24 @@
 {% block main %}
 <div class="main">
 <p>发送邮件</p>
-<form method="post" action={{ url_for('.add') }}>
-<input type="text" name="content" placeholder="content">
-<input type="text" name="title" placeholder="title">
-<input type="text" name="receiver_id" placeholder="receiver_id">
-<button type="submit">提交邮件</button>
-</form>
-
-<p>收到邮件</p>
-{% for r in receives%}
-    <div>
-    <a href = {{ url_for(".view", id = r.id) }} > {{ r.title }}</a>
-    </div>
-{% endfor %}
-<p>发送的邮件</p>
-{% for s in sends%}
-    <div>
-    <a href = {{ url_for(".view", id = s.id) }} > {{ s.title }}</a>
+    <form method="post" action={{ url_for('.add') }}>
+    <input type="text" name="content" placeholder="content">
+    <input type="text" name="title" placeholder="title">
+    <input type="text" name="receiver_id" placeholder="receiver_id">
+    <button class="button-primary1 button-pill1 button-small1" style="padding: 5px 10px" type="submit">提交邮件</button>
+    </form>
+    <div style="margin:60px auto 10px;padding:10px;background-color:#fff;max-width:30em">
+        <p>收到的邮件</p>
+    {% for r in receives%}
+        <div>
+        <a href = {{ url_for(".view", id = r.id) }} > {{ r.title }}</a>
+        </div>
+    {% endfor %}
+    <p>发送的邮件</p>
+    {% for s in sends%}
+        <div>
+        <a href = {{ url_for(".view", id = s.id) }} > {{ s.title }}</a>
+        </div>
     </div>
 </div>
 {% endfor %}

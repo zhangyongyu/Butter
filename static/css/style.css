@@ -22,7 +22,7 @@
   float: right;
   margin-bottom: 20px;
 }
-#content .topic_full_title {
+.topic_full_title {
   font-size: 22px;
   font-weight: bold;
   margin: 8px 0;
@@ -1009,10 +1009,10 @@ textarea.editor {
 }
 .topic-tab {
   margin: 0 10px;
-  color: #80bd01;
+  color: #76C0D8;
 }
 .topic-tab.current-tab {
-  background-color: #80bd01;
+  background-color: #76C0D8;
   color: white;
   padding: 3px 4px;
   border-radius: 3px;

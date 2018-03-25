@@ -11,9 +11,13 @@
 			{{ topic.title }}
       	</span>
                 <div class="changes">
-                    <span>
-          	    {{ topic.views }} 次浏览
-        	</span>
+                    <div>
+                        <img src="{{ topic.user().user_image }}" width="20px"/>
+                        {{ topic.user().nickname }}
+                    </div>
+                    <div>
+                        {{ topic.views }} 次浏览
+                    </div>
                 </div>
             </div>
 
@@ -36,7 +40,7 @@
         <div class='cell reply_area reply_item'>
             <div class='author_content'>
                 <a href="/user/leiwei1991" class="user_avatar">
-                    <img src="https://avatars2.githubusercontent.com/u/10721874?v=3&amp;s=120"
+                    <img src="{{ r.user().user_image }}"
                          title="{{ r.user().username }}"/>
                 </a>
                 <div class='user_info'>
@@ -64,7 +68,7 @@
             </div>
         </div>
         {% endfor %}
-        <div class="inner" style="padding: 10px 0;margin:20px 0 10px">
+        <div class="inner" style="padding: 10px 10px;margin:20px 0 10px">
             <form method="post" action="{{ url_for('reply.add') }}" >
 
                 <input type="hidden" name="topic_id" value="{{ topic.id }}">

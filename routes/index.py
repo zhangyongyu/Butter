@@ -53,7 +53,6 @@ def register():
         form = request.form
         # 用类函数来判断
         u = User.register(form)
-        log('u:::', u)
         return redirect(url_for('index.login'))
     else:
         u = current_user()
