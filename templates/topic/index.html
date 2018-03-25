@@ -27,12 +27,12 @@
 
                     <div class="DashboardProfileCard-userFields account-group">
                         <div class="DashboardProfileCard-name u-textTruncate">
-                            <a class="u-textInheritColor js-nav" href="{{url_for('index.profile')}}" rel="noopener">{{ user.nickname }}</a><span
+                            <a class="u-textInheritColor js-nav" href="{{url_for('index.settings')}}" rel="noopener">{{ user.nickname }}</a><span
                                 class="UserBadges"></span>
                         </div>
                         <div class="DashboardProfileCard-screenname u-inlineBlock u-dir " dir="ltr">
                             <a class="DashboardProfileCard-screennameLink u-linkComplex u-linkClean js-nav"
-                               href="{{url_for('index.profile')}}" rel="noopener"><span class="username u-dir" dir="ltr">@<b
+                               href="{{url_for('index.settings')}}" rel="noopener"><span class="username u-dir" dir="ltr">@<b
                                     class="u-linkComplex-target">{{ user.username }}</b></span></a>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                                     <img src="{{ t.user().user_image }}" title="avatar" style="display: inline-block;vertical-align: middle;float: none;"/>
                                 </a>
 
-                                <a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}">
+                                <a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}" style="margin-left:10px">
                                     {{ t.title }}
                                 </a>
 
